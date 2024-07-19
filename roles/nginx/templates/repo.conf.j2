@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name {{ server_name }};
+
+    location / {
+        root {{ repo_directory }};
+        autoindex on;  # Enables listing of the directory
+        allow all;     # Allows everyone to access the repository
+        {% if enable_basic_auth %}
+        auth_basic "Restricted Content";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+        {% endif %}
+    }
+}

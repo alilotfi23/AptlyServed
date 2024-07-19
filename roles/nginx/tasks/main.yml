@@ -1,0 +1,10 @@
+- name: Install nginx
+  apt:
+    name: nginx
+    state: latest
+
+- name: Configure nginx to serve the repository
+  template:
+    src: repo.conf.j2
+    dest: /etc/nginx/sites-available/repo
+  notify: reload nginx

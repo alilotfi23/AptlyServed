@@ -1,0 +1,5 @@
+- name: create repo metadata
+  shell:
+    cmd: dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
+    chdir: "{{ repo_directory }}"
+    creates: "{{ repo_directory }}/Packages.gz"

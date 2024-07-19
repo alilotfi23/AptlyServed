@@ -1,0 +1,24 @@
+- name: Create repository directory
+  file:
+    path: "{{ repo_directory }}"
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: '0755'
+
+- name: Copy .deb files to the repository
+  copy:
+    src: "{{ item }}"
+    dest: "{{ repo_directory }}"
+    owner: www-data
+    group: www-data
+  with_fileglob:
+    - "{{ deb_files_path }}/*.deb"
+  notify:
+    - create repo metadata
+
+- name: Generate repository metadata
+  command: dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
+  args:
+    chdir: "{{ repo_directory }}"
+  when: inventory_hostname in groups['apt_servers']

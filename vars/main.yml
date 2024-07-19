@@ -1,0 +1,13 @@
+---
+# Variables for Nginx and APT repository setup
+
+# General Server Configuration
+server_name: "myrepo.example.com"
+repo_directory: "/var/www/html/repo"
+
+# Nginx Configuration
+nginx_user: "www-data"
+nginx_group: "www-data"
+
+# Repository Specifics
+deb_files_path: "/path/to/local/deb/files"

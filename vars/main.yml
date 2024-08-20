@@ -2,7 +2,7 @@
 # Variables for Nginx and APT repository setup
 
 # General Server Configuration
-server_name: "myrepo.example.com"
+server_name: "repo.example.com"
 repo_directory: "/var/www/html/repo"
 
 # Nginx Configuration

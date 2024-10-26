@@ -1,12 +1,12 @@
 # AptlyServed
 
-AptlyServed is an Ansible-powered solution designed to streamline the deployment and management of a local APT repository served through Nginx. This project encapsulates best practices and modular design, making it easy to deploy and manage Debian package repositories on your network.
+AptlyServed is an Ansible-powered solution designed to streamline the deployment and management of a local APT repository that is served through Nginx. This project encapsulates best practices and modular design, making deploying and managing Debian package repositories on your network easy.
 
 ## Features
 
 - **Automatic Installation:** Sets up and configures Nginx to serve your APT repository.
 - **Easy Package Management:** Easily add or update Debian packages within your repository.
-- **Modular Design:** Utilizes Ansible roles for clear separation of concerns.
+- **Modular Design:** Utilizes Ansible roles to clearly separate concerns.
 - **Scalable:** Suitable for everything from small labs to large enterprise environments.
 
 ## Requirements

@@ -6,7 +6,7 @@ AptlyServed is an Ansible-powered solution designed to streamline the deployment
 
 - **Automatic Installation:** Sets up and configures Nginx to serve your APT repository.
 - **Easy Package Management:** Easily add or update Debian packages within your repository.
-- **Modular Design:** Utilizes Ansible roles to clearly separate concerns.
+- **Modular Design:** Utilizes Ansible roles to separate concerns.
 - **Scalable:** Suitable for everything from small labs to large enterprise environments.
 
 ## Requirements

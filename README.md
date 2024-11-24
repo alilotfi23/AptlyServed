@@ -11,7 +11,7 @@ AptlyServed is an Ansible-powered solution designed to streamline the deployment
 
 ## Requirements
 
-- An Ubuntu Server (18.04 or newer)
+- An Ubuntu Server (20.04 or newer)
 - Ansible 2.9 or higher
 - SSH access to the target server
 - Sudo privileges on the server
